@@ -56,3 +56,52 @@ function calculerIMC(poids, taille) {
     return (poids / (taille**2))
     //taille**2 peut être aussi écrit avec "Math.pow(taille, 2)" (plus professionnel)
 }
+
+// PLUSIEURS CONDITIONS D'UN COUP (OR/AND)
+
+function exerciceGare(){
+    let gareDeDepart2 = "Rennes";
+    let gareDArrivee2 = prompt("Où souhaitez-vous aller ?") || "Gare du Nord";  //Gare du Nord est entrée ici en destination par défaut, si l'utilisateur n'entre aucune donnée.
+    let chauffeur2 = "Nicolas";
+    
+    if (gareDArrivee2 != "" || gareDeDepart2 != "" && chauffeur2 != "") {
+        alert("Le train va démarrer à destination de " + gareDArrivee2 + " .")
+    } else {
+        alert("Le train ne peut pas démarrer.");
+    }
+}
+
+//LEGUMES OU FRUITS
+
+function fruitOuLegume() {
+    let consommable = prompt("Entrez un ingrédient").toLowerCase();
+
+switch (consommable) {
+    case "carotte":
+    case "courgette":   // On peut en mettre plusieurs à la suite, jusqu'au break !
+    case "pomme de terre":
+        alert("Ceci est un légume.");
+        break;   // évite de lire tous les critères !
+
+    case "banane":
+    case "pomme":
+    case "poire":
+        alert("Ceci est un fruit.");
+        break;
+
+    default:
+        alert("Ceci n'est pas enregistré.")
+        // Pas besoin du break puisque c'est la fin
+}
+}
+
+//DO - WHILE
+
+function doWhile() {
+
+  do {            //sera exécuté au moins une fois
+      var prenom2 = prompt ("Quel est votre prénom ?"); // Prendre une variable globale
+  } while(prenom2 == "" || prenom2 == null)    //se répète si condition s'ajoute
+
+  alert("Bonjour " + prenom2);
+}
