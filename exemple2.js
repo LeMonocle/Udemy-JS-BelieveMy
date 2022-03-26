@@ -23,3 +23,11 @@ console.log(tempsDePreparationFraisier);
 
 console.log(tempsDePreparationChocolat + tempsDePreparationFraisier);
 
+// FONCTIONS ANONYMES (utiles pour les objets)
+
+let fonctionAnonyme = function(){
+    console.log("Je suis une fonction anonyme");
+}
+fonctionAnonyme();
+
+(function() {console.log("Je suis une autre fonction anonyme") })(); //Exécutée automatiquement, plus rapide !! Ne pas oublier les parenthèses, pas de ";", couple de parenthèses à la fin.
