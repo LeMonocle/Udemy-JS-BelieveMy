@@ -1,2 +1,3 @@
-# Udemy-JS-BelieveMy
-Cours de BelieveMy sur le Javascript
+# Cours de BelieveMy sur le JavaScript
+
+Fichiers permettant le suivi des cours sur le JavaScript et l'apprentissage de nouvelles compétences.
