@@ -99,3 +99,36 @@ console.log(monMap);
     })
 
     console.log(utilisateurs);
+
+// OBJET WEAKSET -> Ne peut stocker que des objets
+
+console.log("---------- OBJET WEAKSET ----------");
+
+let voitureA = {
+    constructeur: "Tesla",
+    modele: "CyberTruck"
+}
+
+let voitureB = {
+    constructeur: "Renault",
+    modele: "Espace"
+}
+
+// let voitures = new WeakSet();
+
+// voitures.add(voitureA);
+// voitures.add(voitureB);
+
+// On peut simplement écrire :
+let voitures = new WeakSet([voitureA, voitureB]);
+
+console.log(voitures);
+
+voitures.delete(voitureA);
+
+console.log(voitures);
+
+// OBJET WEAKMAP
+
+console.log("---------- OBJET WEAKMAP ----------");
+
