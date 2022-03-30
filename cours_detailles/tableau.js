@@ -95,7 +95,75 @@
     monTableau2D[0].splice(0,0);
     console.log(monTableau2D[0]);
 
-    //Exercice
-    monTableau2D.splice(2, 0, ["30", "45", "70"]);  //On ajoute une autre dimension au tableau2D
-    console.log(monTableau2D);
-    console.log(monTableau2D[2]);
+        //Exercice
+        monTableau2D.splice(2, 0, ["30", "45", "70"]);  //On ajoute une autre dimension au tableau2D
+        console.log(monTableau2D);
+        console.log(monTableau2D[2]);
+
+    // LES BOUCLES
+
+    console.log("---------- PANIER DE FRUITS ----------");
+
+    let panier = ["fraise", "banane", "poire"];
+
+        for (const fruit in panier) {       //For... in
+            console.log(fruit);                     //0
+            console.log(panier[fruit]);             //fraise
+        }
+
+        for (const fruit of panier) {       //For... of
+            console.log(fruit);                     //fraise
+            console.log(panier.indexOf(fruit));     //0
+        }
+
+    console.log("---------- LISTE DE PAYS ----------");
+
+    let listeDePays = ["France", "Belgique", "Japon", "Maroc"];
+
+            for (const pays of listeDePays) {       //Avant
+                console.log(pays);
+            }
+
+            listeDePays.forEach(function(nomPays){  //Nouveauté
+                console.log(nomPays);
+            })
+
+        listeDePays.forEach(nomDePays => console.log(nomDePays)); //Encore plus rapide !
+
+    //CONCATENER UN TABLEAU ASSOCIATIF
+
+    console.log("---------- CONCATENATION TABLEAU ASSOCIATIF ----------");
+
+    let chaine = "";
+
+    for (const valeur in tableauAssociatif) {
+        chaine += (valeur + " : " + tableauAssociatif[valeur] + "\n");
+    }
+
+    console.log(chaine);
+
+        //Exercice
+        
+        console.log("---------- EXERCICE FONCTION TABLEAU ASSOCIATIF ----------");
+
+        function tableauGenerique(tableauAssociatifGenerique){
+
+            let chaineGenerique = "";
+
+            for (const valeurGenerique in tableauAssociatifGenerique) {
+                chaineGenerique += (valeurGenerique + " : " + tableauAssociatifGenerique[valeurGenerique] + "\n");
+            }
+
+            console.log(chaineGenerique);
+        }
+
+        tableauGenerique(tableauAssociatif);
+
+        let livre4Heures = {
+            "Livre" : "La semaine de 4 heures",
+            "Auteur" : "Timothy Ferriss",
+            "Pages" : "390",
+            "Edition" : "Pearson"
+        };
+
+        tableauGenerique(livre4Heures);
