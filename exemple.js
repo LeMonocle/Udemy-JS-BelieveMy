@@ -20,7 +20,9 @@ function direBonjour(prenom) {
 }
 direBonjour("Nicolas");
 
-//VARAIBLES GLOBALES
+//VARIABLES GLOBALES
+
+console.log("---------- VARIABLES GLOBALES - CRIS DE GUERRE ----------");
 
 let cri1 = "Toujours plus haut !"; // variable globale
 
@@ -35,6 +37,8 @@ criDeGuerre();
 console.log(cri1); //cri1 a été modifié après la fonction !
 
 //FONCTIONS QUI RETOURNENT QUELQUE CHOSE
+
+console.log("---------- FONCTIONS ET RETURN ----------");
 
 let premierNombre = 4, deuxiemeNombre = 7;
 
@@ -69,6 +73,8 @@ function addition(nombreA, nombreB = 10) { //nombreB est un paramètre par défa
 
 console.log("Addition des nombres : " + addition(nombreTest));
 
+console.log("---------- TEMPS DE PREPARATION ET CUISSON ----------");
+
 let preparation = 10, cuisson = 15;
 
 function cuisiner(nombreDeGateaux, minutesDePreparation = preparation, minutesDeCuisson = cuisson) {
@@ -94,6 +100,8 @@ fonctionAnonyme();
 
 //TEST SUR LA PORTEE DES VARIABLES
 
+console.log("---------- PORTEE DES VARIABLES ----------");
+
 let variableLet = "globale";
 var variableVar = "globale";
 
@@ -112,6 +120,8 @@ console.log("var G : " + variableVar);
 
 // BOUCLES RECURSIVES
 
+console.log("---------- BOUCLES RECURSIVES ----------");
+
 function timer(secondes){
 
     if(secondes > 0){
@@ -125,3 +135,57 @@ function timer(secondes){
 }
 
 timer(10);
+
+//FONCTIONS FLECHEES
+
+console.log("---------- FONCTIONS FLECHEES ----------");
+
+let maFonction1 = function(){         //Fonction anonyme (avant)
+    console.log("test fonction anonyme 1");
+}
+
+maFonction1();
+
+//Nouvelle syntaxe pour les fonctions anonymes et petites fonctions. Si un seul paramètre, pas besoin de parenthèses, couple de parenthèses vides si aucun paramètre !
+let maFonctionFlechee = (parametre, autreParametre) => {       
+    console.log("test fonction fléchée")
+}
+maFonctionFlechee();
+
+//On peut tout mettre sur une seule ligne
+let maFonctionFlechee2 = () => console.log("Fonction fléchée plus courte");
+
+maFonctionFlechee2();
+
+// lES FERMETURES (CLOSURE)
+
+console.log("---------- FERMETURES (CLOSURES) ----------");
+
+//Désigne une fonction dans une fonction
+
+function saluer(prenom3) {
+    let salutation = "Bonjour " + prenom3;  //Variable locale
+    let maClosure = () => console.log(salutation);      //Permet de sauvegarder une variable locale dans une fonction
+    return maClosure;
+}
+
+let fonctionNicolas = saluer("Nicolas");
+fonctionNicolas();
+
+function timerClosure(){
+    let secondes = 0;
+    let maClosureTimer = () => {
+        return ++secondes;
+    }
+    return maClosureTimer;
+}
+
+let monTimerClosure = timerClosure();
+console.log(monTimerClosure());     //Renvoie 1
+console.log(monTimerClosure());     //Renvoie 2 (il a sauvegardé la variable secondes dans la closure)
+console.log(monTimerClosure());     //Renvoie 3
+
+let monDeuxièmeTimer = timerClosure();
+console.log(monDeuxièmeTimer());    //Réinitialise le timer dans une nouvelle fonction -> Renvoie 1
+
+console.log(monTimerClosure());     //Le premier timer n'est pas réinitialisé -> Renvoie 4
