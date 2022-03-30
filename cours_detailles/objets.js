@@ -107,12 +107,12 @@ console.log("---------- OBJET WEAKSET ----------");
 let voitureA = {
     constructeur: "Tesla",
     modele: "CyberTruck"
-}
+};
 
 let voitureB = {
     constructeur: "Renault",
     modele: "Espace"
-}
+};
 
 // let voitures = new WeakSet();
 
@@ -128,7 +128,73 @@ voitures.delete(voitureA);
 
 console.log(voitures);
 
-// OBJET WEAKMAP
+// OBJET WEAKMAP -> Collection d'objet, comme weakset, mais avec une clé et une valeur
 
 console.log("---------- OBJET WEAKMAP ----------");
 
+let voitures2 = new WeakMap();
+
+let index = {
+    id: 1
+};
+
+let voitureC = {
+    constructeur: "Tesla",
+    modele: "CyberTruck"
+};
+
+voitures2.set(index, voitureC);
+console.log(voitures2);
+
+voitures2.delete(index);
+console.log(voitures2);
+
+// AJOUTER UN NOMBRE INFINI D'ARGUMENTS (REST parameter)
+
+console.log("---------- REST PARAMETER ----------");
+
+function additionRest(...nombres){
+    let resultat = 0;
+    nombres.forEach(nombre => {
+        resultat += nombre; 
+    });
+    console.log("Le résultat total est " + resultat);
+}
+
+additionRest(4, 9, 5, 415, 78, 54);
+additionRest(4, 56, 2);
+
+// OPERATEUR DE DECOMPOSITION (Spread operator)
+
+console.log("---------- SPREAD OPERATOR ----------");
+
+    //Exemple 1 : fusionner plusieurs tableaux
+
+    // let fruitSpread = ["fraise", "banane", "poire"];
+    // let alimentSpread = ["chocolat", "sucre", "lait"];
+    // let totalSpread = alimentSpread.concat(fruitSpread);     //Les deux tableaux se sont fusionnés
+    
+    let fruitSpread = ["fraise", "banane", "poire"];
+    let alimentSpread = ["chocolat", "sucre", "lait", ...fruitSpread];
+
+    console.log(alimentSpread);
+    
+    //Exemple 2 : découper une chaîne de caractères en plusieurs éléments
+
+    let phrase = "Bonjour !";
+    let phraseTableau = [...phrase];
+
+    console.log(phraseTableau);     //Tous les caractères sont séparés
+    console.log(phraseTableau.length);
+
+    //Exemple 3 : sélectionner un élément, set stocker les autres dans une variable
+    
+    let devises = ["dollar", "euro", "yen"];
+    // let premiereDevise = devises[0];
+    // let autres = [1] + " " + [2];
+
+    //Cela revient à écrire, plus simplement :
+    let [premiereDevise, ...autres] = devises;
+
+    console.log(premiereDevise);
+    console.log(autres);
