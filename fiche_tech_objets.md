@@ -6,87 +6,147 @@ Voici une fiche technique résumant l'ensemble des fonctions liées aux objets S
 
 ## L'objet Set
 
-### Créer un objet Set
+Créer un objet Set
 
-```let monObjet = new Set();
+```js
+let monObjet = new Set();
 // ou
-let monObjet = new Set(['un', 'deux', 'trois']);```
+let monObjet = new Set(['un', 'deux', 'trois']);
+```
+
 Ajouter un élément
 
-```monObjet.add('quatre');```
+```js
+monObjet.add('quatre');
+```
 Supprimer un élément
 
-```monObjet.delete('quatre');```
+```js
+monObjet.delete('quatre');
+```
+
 Supprimer tous les éléments
 
-```monObjet.clear();```
+```js
+monObjet.clear();
+```
+
 Avoir la taille de l'objet (le nombre d'éléments)
 
-```monObjet.size;```
+```js
+monObjet.size;
+```
+
 Vérifier si un élément existe (renvoie donc true ou false)
 
-```monObjet.has('un');```
+```js
+monObjet.has('un');
+```
+
 Retourner tous les éléments
 
-```monObjet.values();
-// ou
-monObjet.keys();```
-
-
-L'objet Map
-Créer un objet Map
-
-let monObjet = new Map();
-Ajouter un élément
-
-monObjet.set('John Doe', {
-    email: 'john@doe.com',
-});
-Supprimer un élément
-
-monObjet.delete('John Doe');
-Supprimer tous les éléments
-
-monObjet.clear();
-Vérifier si un élément existe (renvoie donc true ou false)
-
-monObjet.has('John Doe');
-Retourner un élément
-
-monObjet.get('John Doe');
-Retourner tous les éléments
-
+```js
 monObjet.values();
 // ou
 monObjet.keys();
+```
 
 
-L'objet WeakSet
-Créer un objet WeakSet
+## L'objet Map
 
+Créer un objet Map
+
+```js
+let monObjet = new Map();
+```
+
+Ajouter un élément
+
+```js
+monObjet.set('John Doe', {
+    email: 'john@doe.com',
+});
+```
+
+Supprimer un élément
+
+```js
+monObjet.delete('John Doe');
+```
+
+Supprimer tous les éléments
+
+```js
+monObjet.clear();
+```
+
+### Vérifier si un élément existe (renvoie donc true ou false)
+
+```js
+monObjet.has('John Doe');
+```
+
+### Retourner un élément
+
+```js
+monObjet.get('John Doe');
+```
+
+### Retourner tous les éléments
+
+```js
+monObjet.values();
+// ou
+monObjet.keys();
+```
+
+
+## L'objet WeakSet
+
+### Créer un objet WeakSet
+
+```js
 let monObjet = new WeakSet();
 // ou
 let monObjet = new WeakSet([objet1, objet2, objet3]);
-Ajouter un élément
+```
 
+### Ajouter un élément
+
+```js
 monObjet.add(objet4);
-Supprimer un élément
+```
 
+### Supprimer un élément
+
+```js
 monObjet.delete(objet4);
-Avoir la taille de l'objet (le nombre d'éléments)
+```
 
+### Avoir la taille de l'objet (le nombre d'éléments)
+
+```js
 monObjet.length();
-Vérifier si un élément existe (renvoie donc true ou false)
+```
 
+### Vérifier si un élément existe (renvoie donc true ou false)
+
+```js
 monObjet.has(objet4);
+```
 
 
-L'objet WeakMap
-Créer un objet WeakMap
+## L'objet WeakMap
 
+### Créer un objet WeakMap
+
+```js
 let monObjet = new WeakMap();
-Ajouter un élément
+```
 
+### Ajouter un élément
+
+```js
 const objet1 = {
     nom: 'John Doe',
 }
@@ -94,15 +154,28 @@ const objet1 = {
 monObjet.set(objet1, {
     email: 'john@doe.com',
 });
-Supprimer un élément
+```
 
+### Supprimer un élément
+
+```js
 monObjet.delete(objet1);
-Avoir la taille de l'objet (le nombre d'éléments)
+```
 
+### Avoir la taille de l'objet (le nombre d'éléments)
+
+```js
 monObjet.length();
-Vérifier si un élément existe (renvoie donc true ou false)
+```
 
+### Vérifier si un élément existe (renvoie donc true ou false)
+
+```js
 monObjet.has(objet1);
-Retourner un élément
+```
 
+### Retourner un élément
+
+```js
 monObjet.get(objet1);
+```
