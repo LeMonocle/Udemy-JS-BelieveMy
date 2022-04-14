@@ -10,8 +10,8 @@ console.log(header);
 console.log(h1);
 console.log(p);
 
-h1.textContent = "Hello World";             //Réécrit le texte (propriété)
-h1.innerHTML = "<div style='font-weight: normal'> Hello World again ! </div>"    //On change l'HTML directement
+h1.textContent = "Hello World";                                                 //Réécrit le texte (propriété)
+h1.innerHTML = "<div style='font-weight: normal'> Hello World again ! </div>"   //On change l'HTML directement
 
 p[0].textContent = "Coucou tout le monde, le premier paragraphe a changé !";    //On modifie ici le premier élément "p" (tous les "p" ont été rassemblés dans un tableau, on choisit l'élément par son index)
 
@@ -29,7 +29,7 @@ p[0].textContent = "Coucou tout le monde, le premier paragraphe a changé !";   
         //L'ajouter à la page
     let helloWorld = document.createElement("div");
     helloWorld.textContent = "Hello World bis !";
-    document.body.append(helloWorld);               //AppendChild ne fonctionne qu'avec des objets, on ne peut pas ajouter des strings
+    document.body.append(helloWorld);                               //AppendChild ne fonctionne qu'avec des objets, on ne peut pas ajouter des strings
 
     document.querySelector(".container").prepend(helloWorld);       //On place avant le container. On peut utiliser insertBefore également, mais ici plus simple
 
@@ -40,3 +40,8 @@ p[0].textContent = "Coucou tout le monde, le premier paragraphe a changé !";   
 
 document.querySelector("h1").remove();
 
+
+//MODIFIER LE STYLE (cf. scrpitdom2.js)
+
+//Première méthode
+header[0].style.backgroundColor = "#ffbd69";        //NB : on l'a trouvé byTagName
