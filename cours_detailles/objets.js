@@ -187,7 +187,7 @@ console.log("---------- SPREAD OPERATOR ----------");
     console.log(phraseTableau);     //Tous les caractères sont séparés
     console.log(phraseTableau.length);
 
-    //Exemple 3 : sélectionner un élément, set stocker les autres dans une variable
+    //Exemple 3 : sélectionner un élément, et stocker les autres dans une variable
     
     let devises = ["dollar", "euro", "yen"];
     // let premiereDevise = devises[0];
