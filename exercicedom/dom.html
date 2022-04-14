@@ -25,6 +25,32 @@
         <input type="button" value="Changer le style du header" onclick="changerClasse()"/>
     </div>
 
-    <script src="scriptdom2.js"></script> <!--Écrire le script à la fin, une fois que jle navigateur aura lu toute la page-->
+    <!-- LES EVENEMENTS -->
+
+    <div class="evenements">
+        <h2>Les événements</h2>
+
+        <h3>Les écouteurs "On"</h3>
+
+        <p>Les écouteurs "On", méthode très vieillissante mais très utilisée depuis longtemps, il se peut que qu'elle soit supprimée dans le futur.</p>
+        <a onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?')" href="https://believemy.com">Supprimer cet article</a>
+        <button onmouseover="document.body.style.backgroundColor='orange'"
+                onmouseout="document.body.style.backgroundColor='white'">Passez au dessus de moi</button>
+
+        <h3>Les écouteurs via les propriétés JavaScript</h3>
+
+        <a id="supprimer" href="#">Supprimer cet article</a>
+
+        <button id="passerDessus">Passez au dessus de moi</button>
+
+        <h3>Les écouteurs via le gestionnaire d'événements</h3>
+
+        <a id="supprimerGestionnaire" href="#">Supprimer cet article</a>
+
+        <button id="passerDessusGestionnaire">Passez au dessus de moi</button>
+        
+    </div>
+
+    <script src="scriptdom2.js"></script> <!--Écrire le script à la fin, une fois que le navigateur aura lu toute la page-->
     </body>
 </html>
