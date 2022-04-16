@@ -24,10 +24,10 @@ Le cours est disponible ici : [Javascript : la formation Ultime](https://www.ude
 - [x] Tout savoir sur les tableaux
 - [x] Notions avancées sur les fonctions JavaScript
 - [x] Utilisons le potentiel de JavaScript
-- [ ] Parlons du BOM (Browser Object Model)
-- [ ] Communiquons avec un site internet
-- [ ] Modifions le style de nos éléments
-- [ ] Projet #2 - Pratiquons tout ce que nous venons de voir !
+- [x] Parlons du BOM (Browser Object Model)
+- [x] Communiquons avec un site internet
+- [x] Modifions le style de nos éléments
+- [x] Projet #2 - Pratiquons tout ce que nous venons de voir !
 - [ ] Les événements (le clic, le double-clic, etc.)
 - [ ] Exercices sur les événements
 - [ ] Projet #3 - Générateur de citations
