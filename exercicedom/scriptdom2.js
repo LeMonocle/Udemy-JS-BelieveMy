@@ -69,3 +69,27 @@ function changerClasse() {
 
     //Supprimer des eventListener
     passerDessusGestionnaire.removeEventListener("mouseout", policeGlory);
+
+// STOP PROPAGATION
+
+    let article = document.querySelector("article");
+    let h1      = document.getElementById("titreclic");
+
+    article.addEventListener("click", () => {
+    alert("article cliqué");
+    });
+
+    h1.addEventListener("click", (e) => {
+    alert("titre cliqué");
+    e.stopPropagation(); //Evite que les deux popus ne s'affichent
+    });
+
+//PROGRAMMATION D'EVENEMENTS
+
+    //setTimeout
+    let timer = setTimeout("alert('bonjour')", 3000);         //alerte "bonjour" au bout de 3 secondes
+    clearTimeout(timer);        //Ne s'affiche plus
+
+    //setInterval
+    let interval = setInterval("alert('bonjour')", 5000);        //S'exécute en permanence, dans un intervale régulier
+    clearInterval(interval)     //Ne s'affiche plus

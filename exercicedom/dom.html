@@ -33,7 +33,7 @@
         <h3>Les écouteurs "On"</h3>
 
         <p>Les écouteurs "On", méthode très vieillissante mais très utilisée depuis longtemps, il se peut que qu'elle soit supprimée dans le futur.</p>
-        <a onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?')" href="https://believemy.com">Supprimer cet article</a>
+        <a onclick="() => {return confirm('Êtes-vous sûr de vouloir supprimer cet article ?')}" href="https://believemy.com">Supprimer cet article</a>
         <button onmouseover="document.body.style.backgroundColor='orange'"
                 onmouseout="document.body.style.backgroundColor='white'">Passez au dessus de moi</button>
 
@@ -50,6 +50,10 @@
         <button id="passerDessusGestionnaire">Passez au dessus de moi</button>
         
     </div>
+
+    <article style="background-color: silver">
+        <h1 id="titreclic" style="display: inline">Titre de l'article</h1>
+      </article>
 
     <script src="scriptdom2.js"></script> <!--Écrire le script à la fin, une fois que le navigateur aura lu toute la page-->
     </body>

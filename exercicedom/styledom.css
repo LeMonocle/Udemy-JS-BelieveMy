@@ -27,3 +27,11 @@ header {
     background: -webkit-linear-gradient(to right, #F9D423, #e65c00);
     background: linear-gradient(to right, #F9D423, #e65c00);
 }
+
+#monBloc {
+    background-color: grey;
+  }
+  
+  #monBloc div {
+    background-color: silver;
+  }
